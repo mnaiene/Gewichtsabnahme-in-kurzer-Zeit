@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kostenloser 60-Sekunden Stoffwechsel-Test: Finde heraus, warum bisherige Diäten gescheitert sind und wie du nachhaltig abnimmst – ohne Hungern & ohne Verzicht.">
+<title>Schlank ohne Verzicht – Dein persönlicher Stoffwechsel-Test</title>
+<style>
+:root {
+  --primary: #1e5a27;
+  --primary-light: #2e7d32;
+  --primary-hover: #15431c;
+  --accent-red: #d32f2f;
+  --accent-gold: #f59e0b;
+  --ink: #1a2e1f;
+  --text-body: #37474f;
+  --muted: #546e7a;
+  --bg-cream: #f4f7f2;
+  --card-bg: #ffffff;
+  --line: #d8e2d5;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(25, 48, 30, 0.08);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg-cream);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Top Sticky Urgency Bar */
+.top-bar {
+  background: linear-gradient(90deg, #111827, #1f2937);
+  color: #f3f4f6;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 2px solid #ef4444;
+}
+.pulse-dot {
+  width: 9px;
+  height: 9px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 rgba(239, 68, 68, 0.7);
+  animation: pulse-dot 1.5s infinite;
+}
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 16px 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+header h2 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: .08em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+header small {
+  display: block;
+  color: #c8e6c9;
+  font-size: 11px;
+  letter-spacing: .18em;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+main {
+  max-width: 760px;
+  margin: 25px auto 40px;
+  padding: 0 16px;
+}
+.panel {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.content {
+  padding: clamp(20px, 4vw, 36px);
+}
+
+/* Badges & Eyebrows */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e8f5e9;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid #c8e6c9;
+  margin-bottom: 12px;
+}
+.eyebrow.red {
+  background: #ffebee;
+  color: var(--accent-red);
+  border-color: #ffcdd2;
+}
+
+/* Typography */
+h1 {
+  font-size: clamp(26px, 5.2vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 10px 0 14px;
+  color: #122818;
+  font-weight: 900;
+}
+h1 span.highlight {
+  background: linear-gradient(120deg, rgba(46, 125, 50, 0.15) 0%, rgba(46, 125, 50, 0.05) 100%);
+  color: var(--primary);
+  padding: 0 6px;
+  border-radius: 6px;
+}
+h2 {
+  font-size: clamp(22px, 3.8vw, 28px);
+  line-height: 1.25;
+  margin: 16px 0 10px;
+  color: #122818;
+  font-weight: 800;
+}
+h3 {
+  margin: 18px 0 8px;
+  font-size: 19px;
+  font-weight: 800;
+  color: #1b3820;
+}
+p {
+  color: var(--text-body);
+  margin: 0 0 16px;
+  font-size: 15px;
+}
+.lead {
+  font-size: 17px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-wrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 18px 0 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 380px;
+  object-fit: cover;
+}
+.hero-floating-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 8px 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1b3820;
+}
+.stars {
+  color: var(--accent-gold);
+  letter-spacing: 2px;
+}
+
+/* Trust Pills */
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin: 18px 0 24px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* High Converting CTA Button */
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+  color: #ffffff !important;
+  font-weight: 900;
+  padding: 18px 24px;
+  font-size: 17px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.35);
+  transition: all .2s ease;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #1e6b24 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(46, 125, 50, 0.45);
+}
+.btn.pulse {
+  animation: pulse-btn 2.2s infinite;
+}
+@keyframes pulse-btn {
+  0%, 100% { transform: scale(1); box-shadow: 0 6px 20px rgba(46, 125, 50, 0.35); }
+  50% { transform: scale(1.02); box-shadow: 0 10px 30px rgba(46, 125, 50, 0.55); }
+}
+.btn-subtext {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #d1fae5;
+  margin-top: 4px;
+  letter-spacing: normal;
+}
+.btn.secondary {
+  background: #ffffff;
+  color: var(--primary) !important;
+  border: 2px solid var(--line);
+  box-shadow: none;
+  padding: 13px 20px;
+  font-size: 15px;
+}
+.btn.secondary:hover {
+  background: #f8faf8;
+  border-color: #a5d6a7;
+  transform: translateY(-1px);
+}
+.btn:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none;
+  animation: none;
+}
+
+/* Quiz Styles */
+.progressrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.track {
+  height: 9px;
+  border-radius: 20px;
+  background: #e2ebd8;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #43a047, #1b5e20);
+  width: 16%;
+  transition: width .3s ease;
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 2px solid #e0e8dc;
+  border-radius: 12px;
+  margin: 12px 0;
+  cursor: pointer;
+  background: #ffffff;
+  color: #26382a;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all .18s ease;
+}
+.option:hover {
+  border-color: #81c784;
+  background: #f4faf2;
+  transform: translateX(3px);
+}
+.option.selected {
+  border-color: var(--primary-light);
+  background: #edf7eb;
+  color: var(--primary);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.12);
+}
+.letter {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #c8d6c4;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+  font-size: 13px;
+  font-weight: 800;
+  color: #556b5b;
+}
+.selected .letter {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: white;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+.nav .btn { flex: 1; }
+.nav .secondary { max-width: 120px; }
+
+/* Analyzing Screen */
+.analyzing-box {
+  text-align: center;
+  padding: 40px 20px;
+}
+.spinner-ring {
+  width: 70px;
+  height: 70px;
+  border: 6px solid #e0ebd8;
+  border-top-color: var(--primary-light);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  animation: spin 1s infinite linear;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.check-step {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 380px;
+  margin: 12px auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-body);
+  gap: 10px;
+  opacity: 0.3;
+  transition: opacity .4s ease;
+}
+.check-step.active {
+  opacity: 1;
+  color: var(--primary);
+}
+
+/* Result Screen & Offer Section */
+.alert-card {
+  background: #fff8e1;
+  border-left: 5px solid #ffb300;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin: 18px 0;
+}
+.alert-card.urgent {
+  background: #ffebee;
+  border-left-color: #e53935;
+}
+.alert-card strong {
+  display: block;
+  font-size: 16px;
+  color: #b71c1c;
+  margin-bottom: 4px;
+}
+
+/* Comparison Table */
+.comparison-card {
+  background: #fafbfa;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 24px 0;
+}
+.comparison-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  font-weight: 800;
+  font-size: 14px;
+  border-bottom: 2px solid var(--line);
+}
+.col-bad {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px 10px;
+}
+.col-good {
+  background: #e8f5e9;
+  color: var(--primary);
+  padding: 12px 10px;
+}
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 12px 14px;
+  border-bottom: 1px solid #edf2eb;
+  font-size: 13px;
+}
+.comparison-row:last-child { border-bottom: 0; }
+.comp-bad { color: #d32f2f; }
+.comp-good { color: #2e7d32; font-weight: 700; }
+
+/* Transformation Section */
+.proof-box {
+  background: #ffffff;
+  border: 1px solid #c8d8c2;
+  border-radius: 14px;
+  padding: 18px;
+  margin: 25px 0;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+}
+.proof-img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+/* The Grand Bundle Box */
+.offer-box {
+  background: linear-gradient(180deg, #f0f7ed 0%, #ffffff 100%);
+  border: 2px solid #81c784;
+  border-radius: 18px;
+  padding: 24px clamp(16px, 3.5vw, 30px);
+  margin: 28px 0;
+  box-shadow: 0 12px 36px rgba(46, 125, 50, 0.12);
+  position: relative;
+}
+.badge-discount {
+  position: absolute;
+  top: -14px;
+  right: 20px;
+  background: #d32f2f;
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 6px 14px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.35);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.bundle-img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin: 16px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Countdown Bar */
+.countdown-box {
+  background: #1e293b;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 12px 18px;
+  text-align: center;
+  margin: 16px 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.timer-digits {
+  font-family: monospace;
+  font-size: 22px;
+  font-weight: 900;
+  color: #fbbf24;
+  letter-spacing: 2px;
+}
+
+/* Value Breakdown Stack */
+.value-stack {
+  background: #ffffff;
+  border: 1px solid #d4e2d0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 18px 0;
+}
+.value-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e0ebd8;
+  font-size: 14px;
+}
+.value-item:last-child { border-bottom: 0; }
+.value-item .free-tag {
+  background: #e8f5e9;
+  color: var(--primary);
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.price-tag-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 14px;
+  margin: 22px 0 10px;
+}
+.old-price {
+  font-size: 20px;
+  color: #9e9e9e;
+  text-decoration: line-through;
+  font-weight: 600;
+}
+.special-price {
+  font-size: clamp(38px, 8vw, 52px);
+  color: #b71c1c;
+  font-weight: 900;
+  line-height: 1;
+}
+.price-sub {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* Guarantee Box */
+.guarantee-box {
+  display: flex;
+  gap: 18px;
+  background: #fbfdfa;
+  border: 1px solid #c2d6be;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 22px 0;
+  align-items: center;
+}
+.guarantee-seal {
+  width: 72px;
+  height: 72px;
+  flex: none;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+}
+.guarantee-box h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #1b3820;
+}
+.guarantee-box p {
+  margin: 0;
+  font-size: 13px;
+  color: #4b6151;
+  line-height: 1.45;
+}
+
+/* Testimonials */
+.testimonials {
+  margin: 28px 0;
+}
+.testimonial-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.testi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.testi-author {
+  font-weight: 800;
+  font-size: 14px;
+  color: #1e3a24;
+}
+.testi-result {
+  background: #e8f5e9;
+  color: #1b5e20;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+/* FAQ */
+.faq-section {
+  margin: 32px 0 20px;
+}
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.faq-q {
+  padding: 14px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1f3824;
+  user-select: none;
+}
+.faq-q:hover { background: #f9fbf8; }
+.faq-a {
+  padding: 0 18px 14px;
+  font-size: 14px;
+  color: var(--text-body);
+  display: none;
+}
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-q { color: var(--primary); }
+
+.features { padding: 0; list-style: none; margin: 16px 0; }
+.features li {
+  margin: 10px 0;
+  color: #2e4433;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+}
+.features li span.check {
+  color: #2e7d32;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.security-badges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #607d8b;
+  font-weight: 600;
+  margin: 14px 0 4px;
+}
+
+.small { font-size: 11px; color: #78909c; }
+.hidden { display: none !important; }
+
+footer {
+  text-align: center;
+  color: #78909c;
+  font-size: 12px;
+  padding: 24px 16px;
+  line-height: 1.7;
+}
+footer a { color: #546e7a; text-decoration: underline; }
+
+@media (max-width: 540px) {
+  .hero-wrapper { max-height: 280px; }
+  .guarantee-box { flex-direction: column; text-align: center; }
+  .price-tag-row { gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Sticky Countdown Top Bar -->
+<div class="top-bar">
+  <span class="pulse-dot"></span>
+  <span>EXKLUSIVE SONDERAKTION: Nur noch <span id="top-timer" style="color:#f87171;font-weight:900;">14:59</span> Min. für deinen Stoffwechsel-Bericht reserviert!</span>
+</div>
+
+<header>
+  <h2>SCHLANK OHNE VERZICHT</h2>
+  <small>WISSENSCHAFTLICH FUNDIERT · MAXIMALE SÄTTIGUNG · ALLTAGSTAUGLICH</small>
+</header>
+
+<main>
+<section class="panel">
+<div class="content" id="app">
+
+<!-- ================= STEP 1: INTRO / HOOK ================= -->
+<div id="intro">
+  <span class="eyebrow red">🔥 KOSTENLOSER 60-SEKUNDEN STOFFWECHSEL-SCHNELLTEST</span>
+  <h1>Warum 94% aller Diäten scheitern – und wie du deinen Körper auf <span class="highlight">automatische Fettverbrennung</span> programmierst</h1>
+  <p class="lead">Schluss mit Jo-Jo-Effekt, quälendem Kalorienzählen und frustrierendem Verzicht auf deine Lieblingsspeisen!</p>
+
+  <div class="hero-wrapper">
+    <img src="hero.jpg" alt="Schlank ohne Verzicht – Glücklich und nachhaltig abnehmen" class="hero-img">
+    <div class="hero-floating-badge">
+      <span class="stars">★★★★★</span>
+      <span>4.9 / 5 von 14.850+ Teilnehmern</span>
+    </div>
+  </div>
+
+  <p>Beantworte 6 kurze Fragen zu deinem Alltag und erhalte in wenigen Sekunden deine <strong>persönliche Auswertung</strong>: Finde heraus, welche versteckten Heißhunger-Fallen dich bisher blockiert haben und welcher alltagstaugliche Fahrplan dich garantiert an dein Wunschgewicht bringt.</p>
+
+  <div class="trust-row">
+    <div class="trust-item"><span>⚡</span> <span>Dauer: ca. 60 Sekunden</span></div>
+    <div class="trust-item"><span>🔒</span> <span>100% Kostenlos & Ohne Risiko</span></div>
+    <div class="trust-item"><span>🥗</span> <span>Ohne Hungern & Verzicht</span></div>
+  </div>
+
+  <button class="btn pulse" id="start">
+    👉 JETZT SCHNELLTEST STARTEN (KOSTENLOS)
+    <span class="btn-subtext">Sofortige personalisierte Auswertung am Ende</span>
+  </button>
+</div>
+
+<!-- ================= STEP 2: QUIZ ================= -->
+<div id="quiz" class="hidden">
+  <div class="progressrow">
+    <span style="letter-spacing:.05em;">FORTSCHRITT DEINES TESTS</span>
+    <span id="count" style="font-weight:900;color:var(--primary);">1 / 6</span>
+  </div>
+  <div class="track"><div class="fill" id="fill"></div></div>
+
+  <span class="eyebrow" id="category">DEINE GEWOHNHEITEN</span>
+  <h2 id="question"></h2>
+  <p style="color:var(--muted);font-size:14px;margin-bottom:18px;">Wähle die Antwort, die am ehrlichsten auf dich zutrifft:</p>
+
+  <div id="options"></div>
+
+  <div class="nav">
+    <button class="btn secondary" id="back">← Zurück</button>
+    <button class="btn" id="next" disabled>Weiter →</button>
+  </div>
+</div>
+
+<!-- ================= STEP 3: ANALYZING ANIMATION ================= -->
+<div id="analyzing" class="hidden analyzing-box">
+  <div class="spinner-ring"></div>
+  <h2 style="font-size:24px;margin-bottom:8px;">Dein Stoffwechselprofil wird berechnet...</h2>
+  <p style="color:var(--muted);font-size:15px;">Bitte einen kurzen Moment Geduld (Daten werden verarbeitet)</p>
+
+  <div style="max-width:320px;height:8px;background:#e2ebd8;border-radius:10px;margin:20px auto;overflow:hidden;">
+    <div id="calc-fill" style="width:10%;height:100%;background:#2e7d32;transition:width .4s ease;"></div>
+  </div>
+
+  <div id="step-1" class="check-step active"><span>⏳</span> <span>Antworten werden verschlüsselt analysiert...</span></div>
+  <div id="step-2" class="check-step"><span>🔍</span> <span>Jo-Jo-Blockaden & Hormon-Bremsen identifiziert...</span></div>
+  <div id="step-3" class="check-step"><span>🎯</span> <span>Maßgeschneiderte Turbo-Strategie wird fertiggestellt!</span></div>
+</div>
+
+<!-- ================= STEP 4: AGGRESSIVE RESULT & VALUE OFFER ================= -->
+<div id="result" class="hidden"></div>
+
+</div>
+</section>
+
+<footer>
+  <p>© 2026 Schlank ohne Verzicht · Alle Rechte vorbehalten.<br>
+  <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a> · <a href="#agb">AGB & Widerruf</a></p>
+  <p class="small">Hinweis: Die Ergebnisse können je nach individuellem Stoffwechsel, Ausgangsgewicht und Einsatzbereitschaft variieren. Dieser Ratgeber dient der allgemeinen Gesundheitsförderung und ersetzt keine ärztliche Diagnose oder Therapie.</p>
+</footer>
+</main>
+
+<script>
+const questions = [
+  {
+    category: "Bisherige Erfahrungen",
+    q: "Wie oft hast du schon versucht abzunehmen und wurdest vom Jo-Jo-Effekt enttäuscht?",
+    a: [
+      "Schon mehrfach – ich verliere Gewicht, nehme es aber immer wieder zu.",
+      "Ein- oder zweimal mit klassischen Verzichts-Diäten.",
+      "Ich habe verschiedene Methoden probiert, aber keine passte zu meinem Alltag.",
+      "Ich starte gerade erst meinen ersten ernsthaften Versuch."
+    ]
+  },
+  {
+    category: "Größte Schmerzpunkte",
+    q: "Was ist dein größter Frustfaktor beim Thema Abnehmen?",
+    a: [
+      "Quälender Heißhunger und ständiges Verlangen nach Snacks/Süßem.",
+      "Das Gefühl, auf geliebte Speisen komplett verzichten zu müssen.",
+      "Mangelnde Zeit zum stundenlangen Vorkochen oder Kalorienzählen.",
+      "Mein Gewicht stagniert trotz Disziplin – mein Stoffwechsel scheint blockiert."
+    ]
+  },
+  {
+    category: "Essgewohnheiten & Sättigung",
+    q: "Wie fühlt sich dein Körper typischerweise 1 bis 2 Stunden nach dem Essen an?",
+    a: [
+      "Ich habe schnell wieder Hunger oder Lust auf einen 'süßen Abschluss'.",
+      "Ich fühle mich müde, träge und aufgebläht.",
+      "Tagsüber halte ich durch, aber abends überfällt mich der Kühlschrank.",
+      "Eigentlich satt, aber der Kopf will trotzdem weiteressen."
+    ]
+  },
+  {
+    category: "Dein Wunschziel",
+    q: "Wie viel Gewicht möchtest du nachhaltig und ohne Hunger verlieren?",
+    a: [
+      "3 bis 7 kg (Wohlfühlgewicht & strafferer Bauch)",
+      "8 bis 15 kg (Spürbare Verwandlung & neue Kleidergröße)",
+      "Über 15 kg (Vollständige gesundheitliche Transformation)",
+      "Ich möchte vor allem Körperfett abbauen und meine Energie zurück."
+    ]
+  },
+  {
+    category: "Zeitaufwand & Alltag",
+    q: "Wie viel Zeit kannst du realistisch pro Tag für deine Ernährung aufbringen?",
+    a: [
+      "Maximal 10–15 Minuten (es muss schnell und unkompliziert sein)",
+      "15–30 Minuten für einfache, alltagstaugliche Mahlzeiten",
+      "Ich koche gerne am Wochenende vor",
+      "Ich brauche schnelle 'Notfall-Rezepte' für stressige Tage"
+    ]
+  },
+  {
+    category: "Deine Entschlossenheit",
+    q: "Wann bist du bereit, das ständige Hungern durch echte Fettverbrennung zu ersetzen?",
+    a: [
+      "Sofort! Ich will keine weitere Woche mit Frust-Diäten verschwenden.",
+      "Innerhalb der nächsten 48 Stunden.",
+      "Diese Woche, sobald ich einen klaren Schritt-für-Schritt Plan habe.",
+      "Ich suche noch nach dem richtigen Impuls."
+    ]
+  }
+];
+
+let index = 0;
+let answers = [];
+const $ = id => document.getElementById(id);
+
+// Start Quiz
+$("start").onclick = () => {
+  $("intro").classList.add("hidden");
+  $("quiz").classList.remove("hidden");
+  window.scrollTo({ top: 120, behavior: "smooth" });
+  render();
+};
+
+function render() {
+  const q = questions[index];
+  $("count").textContent = `${index + 1} / ${questions.length}`;
+  $("fill").style.width = `${((index + 1) / questions.length) * 100}%`;
+  $("category").textContent = q.category.toUpperCase();
+  $("question").textContent = q.q;
+  $("options").innerHTML = "";
+
+  q.a.forEach((answer, i) => {
+    const el = document.createElement("div");
+    el.className = "option" + (answers[index] === i ? " selected" : "");
+    el.innerHTML = `<span class="letter">${String.fromCharCode(65 + i)}</span><span>${answer}</span>`;
+    el.onclick = () => {
+      answers[index] = i;
+      renderOptions();
+      // Auto-advance with smooth micro-delay for high conversion
+      setTimeout(() => {
+        if (index < questions.length - 1) {
+          index++;
+          render();
+        } else {
+          startAnalyzing();
+        }
+      }, 220);
+    };
+    $("options").appendChild(el);
+  });
+
+  $("back").disabled = index === 0;
+  $("next").disabled = answers[index] === undefined;
+  $("next").textContent = index === questions.length - 1 ? "JETZT AUSWERTUNG STARTEN →" : "Weiter →";
+}
+
+function renderOptions() {
+  [...$("options").children].forEach((el, i) => {
+    el.classList.toggle("selected", answers[index] === i);
+  });
+  $("next").disabled = answers[index] === undefined;
+}
+
+$("back").onclick = () => {
+  if (index > 0) {
+    index--;
+    render();
+  }
+};
+
+$("next").onclick = () => {
+  if (answers[index] === undefined) return;
+  if (index < questions.length - 1) {
+    index++;
+    render();
+  } else {
+    startAnalyzing();
+  }
+};
+
+// Analyzing Transition (Builds huge curiosity & perceived value)
+function startAnalyzing() {
+  $("quiz").classList.add("hidden");
+  $("analyzing").classList.remove("hidden");
+  window.scrollTo({ top: 120, behavior: "smooth" });
+
+  let progress = 10;
+  const bar = $("calc-fill");
+  const interval = setInterval(() => {
+    progress += 15;
+    if (progress > 100) progress = 100;
+    bar.style.width = progress + "%";
+
+    if (progress >= 40) $("step-2").classList.add("active");
+    if (progress >= 80) $("step-3").classList.add("active");
+
+    if (progress >= 100) {
+      clearInterval(interval);
+      setTimeout(showAggressiveResult, 450);
+    }
+  }, 380);
+}
+
+function showAggressiveResult() {
+  $("analyzing").classList.add("hidden");
+  $("result").classList.remove("hidden");
+  window.scrollTo({ top: 120, behavior: "smooth" });
+
+  // Start live countdown timer (14:59 min)
+  startCountdown(14 * 60 + 59);
+
+  $("result").innerHTML = `
+    <!-- Top Diagnosis Banner -->
+    <span class="eyebrow red">⚠️ DEINE PERSÖNLICHE STOFFWECHSEL-DIAGNOSE</span>
+    <h2>Befund: Dein Stoffwechsel befindet sich im <span style="color:#c62828;">„Sparflammen-Modus“</span></h2>
+    
+    <div class="alert-card urgent">
+      <strong>🚨 Das Problem, warum bisherige Diäten scheitern mussten:</strong>
+      <p style="margin:6px 0 0;font-size:14px;color:#4a1515;">Deine Antworten zeigen eindeutig: Deine früheren Abnehmversuche haben deinen Grundumsatz gebremst. Dein Körper reagiert auf Verzicht mit Heißhunger-Signalen und speichert jede Mahlzeit sofort als Notfall-Fettreserve (Jo-Jo-Falle). <strong>Es ist nicht deine Schuld!</strong></p>
+    </div>
+
+    <!-- Epiphany / Solution -->
+    <h3>Die erlösende Lösung: Reaktiviere deinen Fettstoffwechsel</h3>
+    <p>Statt dich mit 500-Kalorien-Salaten zu quälen, nutzt das <strong>„Schlank ohne Verzicht“ Turbo-System</strong> wissenschaftliche Lebensmittel-Kombinationen mit maximalem Sättigungsindex. Dein Körper schüttet weniger Speicherhormone (Insulin) aus und verbrennt Fett 24 Stunden am Tag – <strong>während du satt und zufrieden bist!</strong></p>
+
+    <!-- Visual Proof Section -->
+    <div class="proof-box">
+      <h3 style="margin-top:0;">Der Unterschied zwischen Frust-Diäten & dem „Schlank ohne Verzicht“ System:</h3>
+      <img src="transformation.jpg" alt="Erfolgreiche Transformation ohne Jo-Jo-Effekt" class="proof-img">
+      
+      <div class="comparison-card">
+        <div class="comparison-header">
+          <div class="col-bad">❌ Typische Crash-Diäten</div>
+          <div class="col-good">✅ Schlank ohne Verzicht</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comp-bad">Quälender Hunger & ständiger Verzicht</div>
+          <div class="comp-good">Reichliche, super-leckere Mahlzeiten</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comp-bad">Stoffwechsel schläft ein (Sparflamme)</div>
+          <div class="comp-good">Fettverbrennung auf Autopilot aktiviert</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comp-bad">Aggressiver Jo-Jo-Effekt vorprogrammiert</div>
+          <div class="comp-good">Dauerhaftes Halten deines Wunschgewichts</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comp-bad">Stundenlanges Kalorienzählen & Stress</div>
+          <div class="comp-good">Alltagstauglich in 10–15 Minuten umsetzbar</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= THE GRAND AGGRESSIVE OFFER BOX ================= -->
+    <div class="offer-box">
+      <div class="badge-discount">🔥 93% QUIZ-RABATT RESERVIERT</div>
+      
+      <span class="eyebrow" style="margin-bottom:6px;">DEIN MASSGESCHNEIDERTES ERFOLGSPAKET</span>
+      <h2 style="font-size:clamp(24px, 4.5vw, 32px);margin-top:4px;">Das komplette „Schlank ohne Verzicht“ Turbo-System</h2>
+      <p style="font-size:15px;color:#2c3e50;">Alles, was du brauchst, um ab heute ohne Verzicht und ohne Jo-Jo-Effekt Fett zu verbrennen:</p>
+
+      <img src="bundle_mockup.jpg" alt="Schlank ohne Verzicht Komplettpaket Mockup" class="bundle-img">
+
+      <!-- Value Stacking Table -->
+      <div class="value-stack">
+        <div class="value-item">
+          <div>
+            <strong>1. Der digitale Hauptleitfaden „Schlank ohne Verzicht“</strong>
+            <div style="font-size:12px;color:#607d8b;">Das vollständige Turbo-System für dauerhafte Fettverbrennung</div>
+          </div>
+          <div style="font-weight:700;color:#37474f;">Wert: 47,00 €</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <strong>🎁 BONUS #1: Die 3-Minuten Fettkiller-Snack-Liste</strong>
+            <div style="font-size:12px;color:#607d8b;">25 sündhaft leckere Snacks, die Heißhunger sofort stoppen</div>
+          </div>
+          <div class="free-tag">HEUTE GRATIS (Wert: 19,90 €)</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <strong>🎁 BONUS #2: Der 7-Tage Stoffwechsel-Turbo Einkaufsplan</strong>
+            <div style="font-size:12px;color:#607d8b;">Stressfrei im normalen Supermarkt einkaufen & Fett schmelzen</div>
+          </div>
+          <div class="free-tag">HEUTE GRATIS (Wert: 24,90 €)</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <strong>🎁 BONUS #3: Der SOS-Notfall-Guide gegen Fressattacken</strong>
+            <div style="font-size:12px;color:#607d8b;">Der psychologische 30-Sekunden-Trick bei abendlicher Lust</div>
+          </div>
+          <div class="free-tag">HEUTE GRATIS (Wert: 17,90 €)</div>
+        </div>
+      </div>
+
+      <!-- Live Countdown -->
+      <div class="countdown-box">
+        <span>⏰ Dein Rabatt-Fenster schließt in:</span>
+        <span class="timer-digits" id="offer-timer">14:59</span>
+      </div>
+
+      <!-- Price Drop -->
+      <div class="price-tag-row">
+        <span class="old-price">Statt 109,70 €</span>
+        <span class="special-price">NUR 7 €</span>
+      </div>
+      <div class="price-sub">Einmalige Investition · Kein Abonnement · Sofortiger digitaler Download</div>
+
+      <!-- Aggressive Pulsing CTA Button -->
+      <a class="btn pulse" href="https://www.digistore24.com/redir/735835/marcionaiene400ae/" target="_blank" rel="noopener">
+        👉 JA! JETZT FÜR NUR 7 € SICHERN & STARTEN ➔
+        <span class="btn-subtext">Sofortiger digitaler Zugang • 100% Geld-zurück-Garantie</span>
+      </a>
+
+      <!-- Security / Trust Badges -->
+      <div class="security-badges">
+        <span>🔒 256-Bit SSL Verschlüsselung</span>
+        <span>⚡ Sofortzugang per E-Mail</span>
+        <span>✓ Verifizierte Digistore24-Zahlung</span>
+      </div>
+    </div>
+
+    <!-- Ironclad 60-Day Guarantee -->
+    <div class="guarantee-box">
+      <div class="guarantee-seal">🛡️</div>
+      <div>
+        <h4>100% Risikofreie 60-Tage Zufriedenheitsgarantie</h4>
+        <p>Lies den Leitfaden, probiere die köstlichen Rezepte und teste das System volle 60 Tage lang. Wenn du nicht sichtbar an Bauchumfang verlierst und absolut begeistert bist, schicke eine kurze, formlose Nachricht und du erhältst jeden einzelnen Cent sofort zurück. <strong>Das gesamte Risiko liegt bei uns!</strong></p>
+      </div>
+    </div>
+
+    <!-- Verified Customer Testimonials -->
+    <div class="testimonials">
+      <h3>Das sagen erfolgreiche Teilnehmerinnen:</h3>
+
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="testi-author">Sarah M. (38 J., Frankfurt)</div>
+          <div class="testi-result">-11,4 kg in 7 Wochen</div>
+        </div>
+        <div class="stars" style="margin-bottom:6px;">★★★★★</div>
+        <p style="margin:0;font-size:14px;color:#37474f;">„Ich war extrem skeptisch, weil ich nach jeder Diät wieder zugenommen habe. Aber mit diesem System hatte ich nicht ein einziges Mal Hunger. Ich esse wieder Nudeln und Schokolade, ohne schlechtes Gewissen – und meine Hosen schlackern!“</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="testi-author">Michael K. (46 J., Wien)</div>
+          <div class="testi-result">-8,7 kg Bauchfett weg</div>
+        </div>
+        <div class="stars" style="margin-bottom:6px;">★★★★★</div>
+        <p style="margin:0;font-size:14px;color:#37474f;">„Als Berufstätiger habe ich keine Zeit für komplizierte Diäten. Die 3-Minuten Snackliste und der Einkaufsguide sind Gold wert. Endlich kein Mittagstief mehr und mein Bauchumfang ist um 12 cm geschrumpft.“</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testi-header">
+          <div class="testi-author">Claudia B. (52 J., Zürich)</div>
+          <div class="testi-result">-14,2 kg dauerhaft gehalten</div>
+        </div>
+        <div class="stars" style="margin-bottom:6px;">★★★★★</div>
+        <p style="margin:0;font-size:14px;color:#37474f;">„In den Wechseljahren schien gar nichts mehr zu gehen. Dieses Programm hat meinen Stoffwechsel endlich aufgeweckt. Für 7 Euro ist das der absolut beste Deal im gesamten Internet!“</p>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="faq-section">
+      <h3>Häufig gestellte Fragen (FAQ)</h3>
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">Muss ich auf Brot, Pasta oder Schokolade verzichten? <span>▾</span></div>
+        <div class="faq-a">Nein! Genau das ist das Geheimnis von „Schlank ohne Verzicht“. Du lernst, wie du durch smarte Kombinationen deinen Blutzuckerspiegel stabil hältst, sodass du deine Lieblingsspeisen weiterhin genießen kannst und trotzdem Fett verbrennst.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Ist das ein Abonnement mit monatlichen Kosten? <span>▾</span></div>
+        <div class="faq-a">Auf keinen Fall! Du zahlst heute einmalig nur 7 € und hast lebenslangen Zugriff auf den Leitfaden sowie alle 3 Boni. Keine versteckten Kosten, kein Abo!</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Wie schnell erhalte ich Zugriff auf die Inhalte? <span>▾</span></div>
+        <div class="faq-a">Sofort! Direkt nach der sicheren Bestellung bei Digistore24 erhältst du deine Zugangsdaten und kannst den Leitfaden sowie die Boni auf dein Smartphone, Tablet oder deinen PC herunterladen.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Was passiert, wenn es bei mir nicht funktioniert? <span>▾</span></div>
+        <div class="faq-a">Dank unserer 60-Tage Geld-zurück-Garantie gehst du null Risiko ein. Wenn du nicht vollkommen zufrieden bist, reicht eine formlose E-Mail und du erhältst dein Geld zu 100% zurück.</div>
+      </div>
+    </div>
+
+    <!-- Final Call to Action -->
+    <div style="text-align:center;margin:32px 0 16px;">
+      <a class="btn pulse" href="https://www.digistore24.com/redir/735835/marcionaiene400ae/" target="_blank" rel="noopener">
+        👉 JETZT VOLLSTÄNDIGES TURBO-SYSTEM SICHERN (NUR 7 €) ➔
+      </a>
+      <p class="small" style="margin-top:10px;">🔒 Sichere 256-Bit SSL-Verschlüsselung · Offizieller Checkout via Digistore24</p>
+    </div>
+
+    <button class="btn secondary" style="margin-top:14px;" onclick="location.reload()">↺ TEST ERNEUT STARTEN</button>
+  `;
+}
+
+// Countdown Timer implementation
+function startCountdown(duration) {
+  let timer = duration;
+  const update = () => {
+    const minutes = Math.floor(timer / 60);
+    const seconds = timer % 60;
+    const str = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    const top = $("top-timer");
+    const offer = $("offer-timer");
+    if (top) top.textContent = str;
+    if (offer) offer.textContent = str;
+    if (--timer < 0) {
+      timer = 15 * 60; // Reset loop
+    }
+  };
+  update();
+  setInterval(update, 1000);
+}
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  item.classList.toggle("open");
+}
+</script>
+</body>
+</html>
